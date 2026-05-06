@@ -15,6 +15,9 @@ const inputRef = document.querySelector("#name-input");
 const titleRef = document.querySelector("#name-output");
 inputRef.addEventListener("input", (evt) => {
     titleRef.textContent = evt.target.value;
+    if (evt.target.value === '') {
+        titleRef.textContent = "незнайомець"
+    }
 });
 
 // Blur
